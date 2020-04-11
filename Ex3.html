@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="lista">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+
+<input id="campo">
+<button id="botao">Adiciona</button>
+
+<script>
+
+    var lis = document.querySelectorAll('li');
+    var ul = document.querySelector(".lista");
+
+    ul.addEventListener("click",function(event) {
+      alert(event.target.textContent);
+    });
+
+
+    var botao = document.querySelector('#botao');
+    var input = document.querySelector('#campo');
+    var lista = document.querySelector('.lista');
+
+    botao.addEventListener('click', function () {
+
+        var li = document.createElement("li");
+        li.textContent = input.value;
+        lista.appendChild(li)
+    });
+</script>
+
+</body>
+</html>
+
+
+
+

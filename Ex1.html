@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button class="botao">Calcula</button>
+<input class="numero">
+<input class="tabuada">
+<span class="resultado"></span>
+
+<script>
+    var dado = componentes();
+
+
+    dado.botao.addEventListener('click', function() {
+        console.log(dado);
+        dado.resultado.textContent = aplicaTabuada(dado.numero.value,dado.tabuada.value);
+    });
+
+    function componentes() {
+        componente = {
+            botao: document.querySelector(".botao"),
+            numero: document.querySelector('.numero'),
+            tabuada: document.querySelector('.tabuada'),
+            resultado: document.querySelector('.resultado')
+        };
+        return componente;
+    }
+
+    function aplicaTabuada(numero, tabuada) {
+        return numero * tabuada;
+    }
+
+
+
+</script>
+</body>
+</html>
